@@ -10,11 +10,11 @@ import java.awt.Graphics;
 
 public class Logica {
 
-    FabricaAdstracta fabrica;
-    ArmaAdstracta arma;
-    ArmaduraAdstracta armadura;
-    PersonajeAdstracto personaje;
-    CaballeriaAdstracta caballeria;
+    FabricaAbstracta fabrica;
+    ArmaAbstracta arma;
+    ArmaduraAbstracta armadura;
+    PersonajeAbstracto personaje;
+    CaballeriaAbstracta caballeria;
     private final Modelo Mimodelo;
 
     public void dibujarRaza(String raza) {
@@ -23,18 +23,20 @@ public class Logica {
         Graphics IArmd=Mimodelo.getVista().getLArmadura().getGraphics();
         Graphics ICab=Mimodelo.getVista().getLCaballeria().getGraphics();
         
-        if (raza.equals("humanos")) {
-            fabrica = new FabricaHumanos();
-
-        } else {
-            if (raza.equals("elfos")) {
+        switch (raza) {
+            case "humanos":
+                fabrica = new FabricaHumanos();
+                break;
+            case "elfos":
                 fabrica = new FabricaElfos();
-            } else {
-                if (raza.equals("orcos")) {
-                    fabrica = new FabricaOrcos();
-                }
-            }
+                break;
+            case "orcos":
+                fabrica = new FabricaOrcos();
+                break;
+            default:
+                break;
         }
+
         System.out.println("3");
 
         arma = fabrica.crearArma();

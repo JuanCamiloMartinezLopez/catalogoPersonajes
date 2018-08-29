@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
  *
  * @author Juan Camilo
  */
-public class PersonajeElfo implements PersonajeAdstracto {
+public class PersonajeElfo implements PersonajeAbstracto {
 
     private ImageIcon ImgPerElf= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/elfo.jpg")).getImage());
 
