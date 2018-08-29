@@ -5,7 +5,7 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,6 +13,6 @@ import java.awt.image.BufferedImage;
  */
 public interface PersonajeAdstracto {
 
-    public BufferedImage ImagenPersonaje();
+    public ImageIcon ImagenPersonaje();
 
 }

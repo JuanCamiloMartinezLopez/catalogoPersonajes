@@ -6,7 +6,6 @@
 package Logica;
 
 import Modelo.Modelo;
-import java.awt.Canvas;
 import java.awt.Graphics;
 
 public class Logica {
@@ -19,17 +18,11 @@ public class Logica {
     private final Modelo Mimodelo;
 
     public void dibujarRaza(String raza) {
-        System.out.println("1");
-        Canvas LPersonaje = Mimodelo.getVista().getLienzoPer();
-        Canvas LArma = Mimodelo.getVista().getLienzoArma();
-        Canvas LArmadura = Mimodelo.getVista().getLienzoArmad();
-        Canvas LCaballeria = Mimodelo.getVista().getLienzoCab();
-        Graphics lapizPer = LPersonaje.getGraphics();
-        Graphics lapizArm = LArma.getGraphics();
-        Graphics lapizArmad = LArmadura.getGraphics();
-        Graphics lapizCab = LCaballeria.getGraphics();
-        System.out.println("2");
-
+        Graphics IPer=Mimodelo.getVista().getLPersonaje().getGraphics();
+        Graphics IArm=Mimodelo.getVista().getLArma().getGraphics();
+        Graphics IArmd=Mimodelo.getVista().getLArmadura().getGraphics();
+        Graphics ICab=Mimodelo.getVista().getLCaballeria().getGraphics();
+        
         if (raza.equals("humanos")) {
             fabrica = new FabricaHumanos();
 
@@ -48,11 +41,10 @@ public class Logica {
         armadura = fabrica.crearArmadura();
         personaje = fabrica.crearPersonaje();
         caballeria = fabrica.crearCaballeria();
-        lapizPer.drawImage(personaje.ImagenPersonaje(), 0, 0, LPersonaje.getWidth(), LPersonaje.getHeight(), LPersonaje);
-        lapizArm.drawImage(arma.ImagenArma(), 0, 0, LArma.getWidth(), LArma.getHeight(), LArma);
-        lapizArmad.drawImage(armadura.ImagenArmadura(), 0, 0, LArmadura.getWidth(), LArmadura.getHeight(), LArmadura);
-        lapizCab.drawImage(caballeria.ImagenCaballeria(), 0, 0, LCaballeria.getWidth(), LCaballeria.getHeight(), LCaballeria);
-        System.out.println("4");
+        IPer.drawImage(personaje.ImagenPersonaje().getImage(), 0, 0,Mimodelo.getVista().getLPersonaje().getWidth() , Mimodelo.getVista().getLPersonaje().getHeight(),null );
+        IArm.drawImage(arma.ImagenArma().getImage(), 0, 0,Mimodelo.getVista().getLPersonaje().getWidth() , Mimodelo.getVista().getLPersonaje().getHeight(),null );
+        IArmd.drawImage(armadura.ImagenArmadura().getImage(), 0, 0,Mimodelo.getVista().getLPersonaje().getWidth() , Mimodelo.getVista().getLPersonaje().getHeight(),null );
+        ICab.drawImage(caballeria.ImagenCaballeria().getImage(), 0, 0,Mimodelo.getVista().getLPersonaje().getWidth() , Mimodelo.getVista().getLPersonaje().getHeight(),null );
 
     }
 

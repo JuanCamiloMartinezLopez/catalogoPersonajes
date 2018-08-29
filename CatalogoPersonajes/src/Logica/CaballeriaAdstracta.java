@@ -1,9 +1,9 @@
 package Logica;
 
-import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
 
 public interface CaballeriaAdstracta {
 
-    public BufferedImage ImagenCaballeria();
+    public ImageIcon ImagenCaballeria();
 
 }

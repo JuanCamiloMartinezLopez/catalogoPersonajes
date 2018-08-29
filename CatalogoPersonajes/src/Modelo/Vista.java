@@ -1,37 +1,36 @@
-
 package Modelo;
 
-import java.awt.Canvas;
 import javax.swing.JButton;
-
+import javax.swing.JPanel;
 
 public class Vista extends javax.swing.JFrame {
+
     private final Modelo Mimodelo;
     private Controlador control;
-
     public Vista(Modelo m) {
         initComponents();
         capturarEventos();
-        Mimodelo=m;
-        
+        Mimodelo = m;
+
     }
+
     private void capturarEventos() {
         JBElfos.addActionListener(getControl());
         JBHumanos.addActionListener(getControl());
         JBOrcos.addActionListener(getControl());
     }
-    
+
     public Modelo getModelo() {
         return Mimodelo;
     }
 
     public Controlador getControl() {
-        if(control == null){
+        if (control == null) {
             control = new Controlador(this);
         }
         return control;
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -44,14 +43,14 @@ public class Vista extends javax.swing.JFrame {
         JBOrcos = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        LienzoPer = new java.awt.Canvas();
-        LienzoCab = new java.awt.Canvas();
-        LienzoArma = new java.awt.Canvas();
-        lienzoArmad = new java.awt.Canvas();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        LPersonaje = new javax.swing.JPanel();
+        LArmadura = new javax.swing.JPanel();
+        LArma = new javax.swing.JPanel();
+        LCaballeria = new javax.swing.JPanel();
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));
@@ -117,7 +116,7 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(JBHumanos)
                 .addGap(52, 52, 52)
                 .addComponent(JBElfos)
@@ -129,14 +128,6 @@ public class Vista extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(102, 102, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 0, 0)));
         jPanel3.setPreferredSize(new java.awt.Dimension(620, 400));
-
-        LienzoPer.setBackground(new java.awt.Color(51, 51, 51));
-
-        LienzoCab.setBackground(new java.awt.Color(51, 51, 51));
-
-        LienzoArma.setBackground(new java.awt.Color(51, 51, 51));
-
-        lienzoArmad.setBackground(new java.awt.Color(51, 51, 51));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 0));
@@ -154,47 +145,111 @@ public class Vista extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 0));
         jLabel5.setText("CABALLERIA");
 
+        LPersonaje.setBackground(new java.awt.Color(51, 51, 51));
+        LPersonaje.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LPersonaje.setPreferredSize(new java.awt.Dimension(161, 155));
+
+        javax.swing.GroupLayout LPersonajeLayout = new javax.swing.GroupLayout(LPersonaje);
+        LPersonaje.setLayout(LPersonajeLayout);
+        LPersonajeLayout.setHorizontalGroup(
+            LPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 159, Short.MAX_VALUE)
+        );
+        LPersonajeLayout.setVerticalGroup(
+            LPersonajeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 153, Short.MAX_VALUE)
+        );
+
+        LArmadura.setBackground(new java.awt.Color(51, 51, 51));
+        LArmadura.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LArmadura.setPreferredSize(new java.awt.Dimension(161, 155));
+
+        javax.swing.GroupLayout LArmaduraLayout = new javax.swing.GroupLayout(LArmadura);
+        LArmadura.setLayout(LArmaduraLayout);
+        LArmaduraLayout.setHorizontalGroup(
+            LArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 159, Short.MAX_VALUE)
+        );
+        LArmaduraLayout.setVerticalGroup(
+            LArmaduraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 153, Short.MAX_VALUE)
+        );
+
+        LArma.setBackground(new java.awt.Color(51, 51, 51));
+        LArma.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LArma.setPreferredSize(new java.awt.Dimension(161, 155));
+
+        javax.swing.GroupLayout LArmaLayout = new javax.swing.GroupLayout(LArma);
+        LArma.setLayout(LArmaLayout);
+        LArmaLayout.setHorizontalGroup(
+            LArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 159, Short.MAX_VALUE)
+        );
+        LArmaLayout.setVerticalGroup(
+            LArmaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 153, Short.MAX_VALUE)
+        );
+
+        LCaballeria.setBackground(new java.awt.Color(51, 51, 51));
+        LCaballeria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LCaballeria.setPreferredSize(new java.awt.Dimension(161, 155));
+
+        javax.swing.GroupLayout LCaballeriaLayout = new javax.swing.GroupLayout(LCaballeria);
+        LCaballeria.setLayout(LCaballeriaLayout);
+        LCaballeriaLayout.setHorizontalGroup(
+            LCaballeriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 159, Short.MAX_VALUE)
+        );
+        LCaballeriaLayout.setVerticalGroup(
+            LCaballeriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 153, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LPersonaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LienzoPer, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lienzoArmad, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(LienzoArma, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(LCaballeria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LienzoCab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(21, 21, 21))
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(LienzoPer, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(jLabel1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel4))
-                    .addComponent(LienzoArma, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LPersonaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LArma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -204,11 +259,10 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(jLabel5)
                                 .addGap(85, 85, 85))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LienzoCab, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lienzoArmad, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LArmadura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LCaballeria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -219,23 +273,23 @@ public class Vista extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 575, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE))
-                .addGap(0, 40, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
+                .addGap(0, 39, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,7 +302,7 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBHumanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBHumanosActionPerformed
-       
+
     }//GEN-LAST:event_JBHumanosActionPerformed
 
     private void JBElfosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBElfosActionPerformed
@@ -267,29 +321,30 @@ public class Vista extends javax.swing.JFrame {
         return JBOrcos;
     }
 
-    public Canvas getLienzoArma() {
-        return LienzoArma;
+    public JPanel getLArma() {
+        return LArma;
     }
 
-    public Canvas getLienzoCab() {
-        return LienzoCab;
+    public JPanel getLArmadura() {
+        return LArmadura;
     }
 
-    public Canvas getLienzoPer() {
-        return LienzoPer;
+    public JPanel getLCaballeria() {
+        return LCaballeria;
     }
 
-    public Canvas getLienzoArmad() {
-        return lienzoArmad;
+    public JPanel getLPersonaje() {
+        return LPersonaje;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBElfos;
     private javax.swing.JButton JBHumanos;
     private javax.swing.JButton JBOrcos;
-    private java.awt.Canvas LienzoArma;
-    private java.awt.Canvas LienzoCab;
-    private java.awt.Canvas LienzoPer;
+    private javax.swing.JPanel LArma;
+    private javax.swing.JPanel LArmadura;
+    private javax.swing.JPanel LCaballeria;
+    private javax.swing.JPanel LPersonaje;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -299,6 +354,5 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private java.awt.Canvas lienzoArmad;
     // End of variables declaration//GEN-END:variables
 }

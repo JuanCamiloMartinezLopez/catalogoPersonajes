@@ -5,10 +5,7 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,15 +13,13 @@ import javax.imageio.ImageIO;
  */
 public class CaballeriaElfos implements CaballeriaAdstracta{
     
-    private BufferedImage ImgCabElf;
-
-    public CaballeriaElfos() throws IOException {
-        this.ImgCabElf = ImageIO.read(new File("../imagenes/cabelfo.jpg"));
-    }
+    private ImageIcon ImgCabElf= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/cabelfo.jpg")).getImage());
 
     @Override
-    public BufferedImage ImagenCaballeria() {
-        return this.ImgCabElf;
+    public ImageIcon ImagenCaballeria() {
+        return ImgCabElf;
     }
+
+    
     
 }

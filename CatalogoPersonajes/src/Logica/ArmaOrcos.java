@@ -5,10 +5,7 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,15 +13,13 @@ import javax.imageio.ImageIO;
  */
 public class ArmaOrcos implements ArmaAdstracta {
 
-    private BufferedImage ImgArmOrcs;
-
-    public ArmaOrcos() throws IOException {
-        this.ImgArmOrcs = ImageIO.read(new File("../imagenes/armaorco.jpg"));
-    }
+    private ImageIcon ImgArmOrcs= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/armaorco.jpg")).getImage());
 
     @Override
-    public BufferedImage ImagenArma() {
-        return this.ImgArmOrcs;
+    public ImageIcon ImagenArma() {
+        return ImgArmOrcs;
     }
+
+    
 
 }

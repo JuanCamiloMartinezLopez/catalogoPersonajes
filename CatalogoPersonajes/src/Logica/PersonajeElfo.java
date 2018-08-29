@@ -5,10 +5,7 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,15 +13,13 @@ import javax.imageio.ImageIO;
  */
 public class PersonajeElfo implements PersonajeAdstracto {
 
-    private BufferedImage ImgPerElf;
-
-    public PersonajeElfo() throws IOException {
-        this.ImgPerElf = ImageIO.read(new File("../imagenes/elfo.jpg"));
-    }
+    private ImageIcon ImgPerElf= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/elfo.jpg")).getImage());
 
     @Override
-    public BufferedImage ImagenPersonaje() {
-        return this.ImgPerElf;
+    public ImageIcon ImagenPersonaje() {
+        return ImgPerElf;
     }
+
+    
 
 }

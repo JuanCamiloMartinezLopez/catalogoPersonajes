@@ -5,7 +5,8 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
+
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,5 +14,5 @@ import java.awt.image.BufferedImage;
  */
 public interface ArmaduraAdstracta {
 
-    public BufferedImage ImagenArmadura();
+    public ImageIcon ImagenArmadura();
 }
