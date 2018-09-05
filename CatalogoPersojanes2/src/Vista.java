@@ -4,15 +4,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Vista extends javax.swing.JFrame {
-    logica log=new logica();
 
-    ImageIcon Orco = new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/Orco F PNG.png")).getImage());
-    ImageIcon Arma = new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/Arma derecha.png")).getImage());
-    ImageIcon Armadura = new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/Armadura superior.png")).getImage());
+    logica log = new logica();
 
     public Vista() {
         initComponents();
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -155,13 +152,12 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int NumOrc=Integer.parseInt(getNumOrc().getText());
-        int NumElf=Integer.parseInt(getNumElf().getText());
-        int NumHum=Integer.parseInt(getNumHum().getText());
-        log.dibujar(NumHum, NumElf, NumOrc,getLienzo());
-        
-        
-        
+        int NumOrc = Integer.parseInt(getNumOrc().getText());
+        int NumElf = Integer.parseInt(getNumElf().getText());
+        int NumHum = Integer.parseInt(getNumHum().getText());
+        log.dibujar(NumHum, NumElf, NumOrc, getLienzo());
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public JPanel getLienzo() {
@@ -185,8 +181,7 @@ public class Vista extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Vista().setVisible(true);
-                
-                
+
             }
         });
     }
