@@ -28,8 +28,8 @@ public class logica {
                 System.out.println("2.1" + prueba);
                 System.out.println("2." + (n * 4) / 3);
             } else {
-                n = (int) Math.ceil(((Math.sqrt(((TImg * 3) / 4)))) + 1);
-                m = (int) Math.ceil((n * 4) / 3);
+                n = (int) Math.ceil(((Math.sqrt(((TImg * 3.) / 4.)))) + 1);
+                m = (int) Math.ceil((n * 4.) / 3.);
 
             }
 
