@@ -113,18 +113,17 @@ public class Vista extends javax.swing.JFrame {
         );
 
         Lienzo.setBackground(new java.awt.Color(51, 51, 51));
-        Lienzo.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 0, 0)));
         Lienzo.setPreferredSize(new java.awt.Dimension(773, 690));
 
         javax.swing.GroupLayout LienzoLayout = new javax.swing.GroupLayout(Lienzo);
         Lienzo.setLayout(LienzoLayout);
         LienzoLayout.setHorizontalGroup(
             LienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 767, Short.MAX_VALUE)
+            .addGap(0, 773, Short.MAX_VALUE)
         );
         LienzoLayout.setVerticalGroup(
             LienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGap(0, 690, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -20,9 +20,9 @@ public class logica {
         int TImg = NumH + NumE + NumO;
         if (TImg != 0) {
             if (TImg % 2 == 0) {
-                n = (int) Math.ceil(Math.sqrt(((TImg * 3) / 4)));
+                n = (int) Math.ceil(Math.sqrt(((TImg * 3.) / 4.)));
                 System.out.println("1." + Math.sqrt(((TImg * 3) / 4)));
-                m = (int) Math.ceil((n * 4) / 3);
+                m = (int) Math.ceil((n * 4.) / 3.);
                 float prueba;
                 prueba = (float) Math.sqrt(4.5);
                 System.out.println("2.1" + prueba);
@@ -35,7 +35,7 @@ public class logica {
 
             //MatrizImg = new ImageIcon[n][m];
             g.setColor(lienzo.getBackground());
-            g.fillRect(4, 4, lienzo.getWidth() - 10, lienzo.getHeight() - 10);
+            g.fillRect(0, 0, lienzo.getWidth(), lienzo.getHeight());
             System.out.println("n." + n);
             System.out.println("m." + m);
             g.setColor(Color.BLACK);
