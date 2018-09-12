@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
  */
 public class ArmaElfos implements ArmaAdstracta {
 
-    private ImageIcon ImgArmElf= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/armaelfo.jpg")).getImage());
+    private ImageIcon ImgArmElf= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/Orco.png")).getImage());
     
     @Override
     public ImageIcon ImagenArma() {

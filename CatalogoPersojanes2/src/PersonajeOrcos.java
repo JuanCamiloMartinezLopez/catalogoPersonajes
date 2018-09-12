@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  */
 public class PersonajeOrcos implements PersonajeAdstracto {
 
-    private ImageIcon ImgPerOrcs= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/orco.jpg")).getImage());
+    private ImageIcon ImgPerOrcs= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/Orco.png")).getImage());
 
     @Override
     public ImageIcon ImagenPersonaje() {

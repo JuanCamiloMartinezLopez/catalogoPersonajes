@@ -155,7 +155,7 @@ public class Vista extends javax.swing.JFrame {
         int NumElf = Integer.parseInt(getNumElf().getText());
         int NumHum = Integer.parseInt(getNumHum().getText());
         log.dibujar(NumHum, NumElf, NumOrc, getLienzo());
-
+        //log.prueba(getLienzo());
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

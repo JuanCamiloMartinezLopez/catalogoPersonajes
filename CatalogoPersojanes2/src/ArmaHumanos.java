@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
  */
 public class ArmaHumanos implements ArmaAdstracta {
 
-    private ImageIcon ImgArmHum= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/armahumano.jpg")).getImage());
+    private ImageIcon ImgArmHum= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/ArmaH.png")).getImage());
 
     @Override
     public ImageIcon ImagenArma() {
