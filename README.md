@@ -1,4 +1,4 @@
-# Catálogo de personajes
+# Catálogo de personajes Abstract Factory
 
 Además de ser un ejemplo concreto de la utilización del Abtract Factory, es el catálogo de personajes principal de un juego. Está elaborado en java, al clonar el repositorio se debe abrir con IDE Netbeans CatalogoPersonajes.
 
