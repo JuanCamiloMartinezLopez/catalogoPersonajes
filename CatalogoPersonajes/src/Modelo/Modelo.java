@@ -13,8 +13,6 @@ import Logica.Logica;
  */
 public class Modelo {
 
-    
-
     private Vista MiVista;
     private Logica MiCatalogo;
 
@@ -46,6 +44,7 @@ public class Modelo {
     }
 
     public void enviarraza(String raza) {
+        System.out.println("LLEGO AQUI");
         getLogica().dibujarRaza(raza);
     }
 

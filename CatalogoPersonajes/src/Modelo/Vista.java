@@ -1,5 +1,6 @@
 package Modelo;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -14,7 +15,7 @@ public class Vista extends javax.swing.JFrame {
 
     }
 
-    private void capturarEventos() {
+    public void capturarEventos() {
         JBElfos.addActionListener(getControl());
         JBHumanos.addActionListener(getControl());
         JBOrcos.addActionListener(getControl());
@@ -90,6 +91,11 @@ public class Vista extends javax.swing.JFrame {
         JBOrcos.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         JBOrcos.setForeground(new java.awt.Color(255, 255, 0));
         JBOrcos.setText("ORCOS");
+        JBOrcos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBOrcosActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
@@ -302,12 +308,16 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBHumanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBHumanosActionPerformed
-
+        Mimodelo.enviarraza("humanos");
     }//GEN-LAST:event_JBHumanosActionPerformed
 
     private void JBElfosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBElfosActionPerformed
-        // TODO add your handling code here:
+        Mimodelo.enviarraza("elfos");
     }//GEN-LAST:event_JBElfosActionPerformed
+
+    private void JBOrcosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBOrcosActionPerformed
+        Mimodelo.enviarraza("orcos");
+    }//GEN-LAST:event_JBOrcosActionPerformed
 
     public JButton getJBElfos() {
         return JBElfos;

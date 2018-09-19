@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
  *
  * @author Juan Camilo
  */
-public class CaballeriaOrcos implements CaballeriaAdstracta {
+public class CaballeriaOrcos implements CaballeriaAbstracta {
 
     private ImageIcon ImgCabOrcs= new ImageIcon(new ImageIcon(getClass().getResource("/imagenes/caborco.jpg")).getImage());
 
