@@ -6,6 +6,22 @@ public class PersonajeCreator {
     public PersonajeCreator(String TypePers) {
         DirectorPersonaje Dir = new DirectorPersonaje();
         
+//        if("Elfo".equals(TypePers)){
+//            
+//            Dir.setConstructor(new Elfo());
+//            
+//        } else {
+//            
+//            if("Humano".equals(TypePers)){
+//                
+//                Dir.setConstructor(new Humano());
+//            
+//            } else {
+//                
+//                Dir.setConstructor(new Orco());
+//            }
+//        }
+        
         switch (TypePers) {
             case "Elfo":
                 
